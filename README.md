@@ -1,6 +1,8 @@
 # todo-app
 
-> A Vue.js project
+> A simple to do app made with Vue.js
+
+![](static/screenshot.png)
 
 ## Build Setup
 
