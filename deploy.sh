@@ -8,6 +8,7 @@ npm run build
 
 # navigate into the build output directory
 cd dist
+sed -i 's/\/static/.\/static/g' index.html
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
