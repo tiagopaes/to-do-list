@@ -4,7 +4,9 @@ node_js:
 
 cache: npm
 
-script: npm run build
+script:
+  - npm run build
+  - sed -i 's/\/static/.\/static/g' index.html
 
 deploy:
  provider: pages
