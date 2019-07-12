@@ -1,4 +1,5 @@
 # todo-app
+[![Build Status](https://travis-ci.org/tiagopaes/to-do-list.svg?branch=master)](https://travis-ci.org/tiagopaes/to-do-list)
 
 > A simple to do app made with Vue.js
 
