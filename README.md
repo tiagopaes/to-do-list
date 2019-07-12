@@ -2,6 +2,8 @@
 
 > A simple to do app made with Vue.js
 
+[Live app!](https://tiagopaes.github.io/to-do-list/)
+
 ![](static/screenshot.png)
 
 ## Build Setup
