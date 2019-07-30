@@ -1,8 +1,18 @@
 <template>
   <div>
-    <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
-    <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
-    <todo v-on:delete-todo="deleteTodo" v-on:complete-todo="completeTodo" v-for="todo in todos" :todo.sync="todo" :key="todo.title"></todo>
+    <div class="ui one column center aligned page grid">
+      <div class="column twelve wide">
+        <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
+        <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
+      </div>
+    </div>
+    <todo
+      v-on:delete-todo="deleteTodo"
+      v-on:complete-todo="completeTodo"
+      v-for="todo in todos"
+      :key="todo.title"
+      :todo="todo"
+    ></todo>
   </div>
 </template>
 

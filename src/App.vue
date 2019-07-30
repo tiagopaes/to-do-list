@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <todo-list v-bind:todos="todos"></todo-list>
-    <create-todo v-on:add-todo="addTodo"></create-todo>
+    <br>
+    <div class="ui container">
+      <todo-list v-bind:todos="todos"></todo-list>
+      <create-todo v-on:add-todo="addTodo"></create-todo>
+    </div>
   </div>
 </template>
 
@@ -19,19 +22,15 @@ export default {
     return {
       todos: [{
         title: 'Todo A',
-        project: 'Project A',
         done: false,
       }, {
         title: 'Todo B',
-        project: 'Project B',
         done: true,
       }, {
         title: 'Todo C',
-        project: 'Project C',
         done: false,
       }, {
         title: 'Todo D',
-        project: 'Project D',
         done: false,
       }],
     };

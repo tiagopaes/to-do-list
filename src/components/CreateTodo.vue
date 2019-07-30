@@ -10,10 +10,6 @@
             <label>Title</label>
             <input v-model="titleText" type='text' ref='title' defaultValue="">
           </div>
-          <div class='field'>
-            <label>Project</label>
-            <input v-model="projectText" type='text' ref='project' defaultValue="">
-          </div>
           <div class='ui two button attached buttons'>
             <button class='ui basic blue button' v-on:click="sendForm()">
               Create
@@ -33,7 +29,6 @@ export default {
   data() {
     return {
       titleText: '',
-      projectText: '',
       isCreating: false,
     };
   },
@@ -45,19 +40,16 @@ export default {
       this.isCreating = false;
     },
     sendForm() {
-      if (this.titleText.length > 0 && this.projectText.length > 0) {
+      if (this.titleText.length > 0) {
         const title = this.titleText;
-        const project = this.projectText;
         this.$emit('add-todo', {
           title,
-          project,
           done: false,
         });
         this.titleText = '';
-        this.projectText = '';
       }
       this.isCreating = false;
     },
   },
-};
+}
 </script>
