@@ -1,0 +1,16 @@
+{
+  "name": "To do list",
+  "short_name": "To do list",
+  "description": "A simple to do list",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "./icons/logo.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}
