@@ -2,8 +2,8 @@
   <div>
     <div class="ui one column center aligned page grid">
       <div class="column twelve wide">
-        <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
-        <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
+        <p>Completed Tasks: {{todos.filter(todo => todo.done === true).length}}</p>
+        <p>Pending Tasks: {{todos.filter(todo => todo.done === false).length}}</p>
       </div>
     </div>
     <todo
@@ -17,26 +17,25 @@
 </template>
 
 <script>
+import Todo from "./Todo";
+import StorageService from "./../services/StorageService";
 
-  import Todo from './Todo';
-
-  export default {
-    props: ['todos'],
-    components: {
-      Todo,
+export default {
+  props: ["todos"],
+  components: {
+    Todo
+  },
+  methods: {
+    deleteTodo(todo) {
+      const todoIndex = this.todos.indexOf(todo);
+      this.todos.splice(todoIndex, 1);
+      StorageService.save("todos", this.todos);
     },
-    methods: {
-      deleteTodo(todo) {
-        const todoIndex = this.todos.indexOf(todo);
-        this.todos.splice(todoIndex, 1);
-      },
-      completeTodo(todo) {
-        const todoIndex = this.todos.indexOf(todo);
-        this.todos[todoIndex].done = true;
-      },
-    },
+    completeTodo(todo) {
+      const todoIndex = this.todos.indexOf(todo);
+      this.todos[todoIndex].done = !todo.done;
+      StorageService.save("todos", this.todos);
+    }
   }
+};
 </script>
-
-<style scoped>
-</style>
