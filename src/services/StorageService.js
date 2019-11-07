@@ -1,9 +1,9 @@
 export default {
-  load(key) {
+  get(key) {
     return JSON.parse(localStorage.getItem(key))
   },
 
-  save(key, value) {
+  set(key, value) {
     localStorage.setItem(key, JSON.stringify(value))
   }
 }
