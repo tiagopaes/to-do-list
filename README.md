@@ -1,4 +1,5 @@
 # todo-app
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/28fea7f8afa14188aee4715c915a9109)](https://app.codacy.com/manual/tiagopaes37/to-do-list?utm_source=github.com&utm_medium=referral&utm_content=tiagopaes/to-do-list&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/tiagopaes/to-do-list.svg?branch=master)](https://travis-ci.org/tiagopaes/to-do-list)
 
 > A simple and useful to do list app made with Vue.js
